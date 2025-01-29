@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 import yaml       
- 
+   
 app = Flask(__name__)
 db_config = yaml.load(open('database.yaml'), Loader=yaml.FullLoader)
 app.config['SQLALCHEMY_DATABASE_URI'] = db_config['uri'] 
